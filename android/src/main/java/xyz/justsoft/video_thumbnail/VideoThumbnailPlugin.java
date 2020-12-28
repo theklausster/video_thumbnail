@@ -210,7 +210,7 @@ public class VideoThumbnailPlugin implements MethodCallHandler {
                     // API Level 27
                     bitmap = retriever.getScaledFrameAtTime(timeMs * 1000, MediaMetadataRetriever.OPTION_CLOSEST_SYNC, targetW, targetH);
                 } else {
-                    bitmap = retriever.getFrameAtTime(timeMs * 1000);
+                    bitmap = retriever.getFrameAtTime(0);
                     if (bitmap != null) {
                         int width = bitmap.getWidth();
                         int height = bitmap.getHeight();
